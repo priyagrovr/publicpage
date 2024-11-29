@@ -24,6 +24,11 @@ jobs:
       - name: Build the project
         run: yarn build
 
+      - name: Set Git user info
+        run: |
+          git config --global user.email "priya.grover1988@gmail.com"
+          git config --global user.name "priyagrovr"
+
       - name: Deploy to GitHub Pages
         run: |
           yarn add gh-pages
